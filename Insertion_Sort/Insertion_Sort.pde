@@ -25,15 +25,11 @@ void draw() {
   }
   
   insertionSort(array);
-  
-  if(i == array.length) {
-    i--;
-  }
 }
 
 // Insertion sort function
 void insertionSort(float[] arr) {
-  if(i > 0) {
+  if(i > 0 && i < array.length) {
     int j = i; 
     while(j > 0) {
       float temp1 = array[j];
@@ -44,6 +40,6 @@ void insertionSort(float[] arr) {
       }
       j--;
     }
+    i++;
   }
-  i++; 
 }
