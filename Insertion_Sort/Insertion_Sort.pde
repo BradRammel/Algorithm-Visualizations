@@ -2,9 +2,9 @@ float[] array;
 int i = 1; 
 
 void setup() {
- size(800,500);
+ size(1500,500);
  
- array = new float[width/10];
+ array = new float[width/5];
  for(int i = 0; i < array.length; i++) {
   array[i] = random(height);
  }
@@ -20,8 +20,8 @@ void draw() {
   for(int i = 0; i < array.length; i++) {
     stroke(255); 
     noFill();
-    rect(x, height, x + 10, height - array[i]); 
-    x = x + 10;
+    rect(x, height, x + 5, height - array[i]); 
+    x = x + 5;
   }
   
   insertionSort(array);
