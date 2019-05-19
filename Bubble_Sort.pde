@@ -2,21 +2,27 @@ float[] values;
 
 void setup() {
  size(1500,500);
- values = new float[width];
+ frameRate(30);
+ values = new float[width/5];
  for(int i = 0; i < values.length; i++) {
   values[i] = random(height); 
  }
 }
 
 void draw() {
- background(0); 
- 
- for(int i = 0; i < values.length; i++) {
-  stroke(255);
-  line(i, height, i, height - values[i]);
- }
+  background(0); 
 
- bubbleSort(values);
+  //Creates an array of rectangles
+  int x = 0; 
+  rectMode(CORNERS);
+  for(int i = 0; i < values.length; i++) {
+    stroke(255);
+    fill(0);
+    rect(x, height, x + 5, height - values[i]);
+    x = x + 5;
+  }
+
+  bubbleSort(values);
 }
 
 void bubbleSort(float[] arr) {
