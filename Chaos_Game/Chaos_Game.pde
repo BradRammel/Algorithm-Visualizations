@@ -28,7 +28,7 @@ void draw() {
 
   // Starting point
   stroke(255);
-  strokeWeight(5);
+  strokeWeight(2);
   point(x, y); 
   
   // Choose which point to go toward next
